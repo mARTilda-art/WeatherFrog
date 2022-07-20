@@ -58,7 +58,7 @@ function handleSubmit(event) {
 let citySearch = document.querySelector("#city-form");
 citySearch.addEventListener("submit", handleSubmit);
 
-const axios = require("axios");
+//const axios = require("axios");
 
 // find temperature to current location
 
