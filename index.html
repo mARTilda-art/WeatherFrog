@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherFrog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b18b5e2fa2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+       <h1><i class="fa-solid fa-frog"></i>  W e a t h e r F r o g</h1> 
+
+  <form id = "city-form">
+   <div class="row mb-3">
+    <div class="col-4">
+      <label for="inputCity" class="form-label">Insert your city</label>
+    </div>
+    <div class="col-4">
+      <input type="text" 
+      class="form-control" 
+      id="inputCity" 
+      aria-describedby="city" 
+      placeholder="city" 
+      autocomplete="off" 
+      autofocus="on">
+    </div>
+    <div class="col-2">
+       <button type="submit" class="btn btn-primary find" id="buttonCity">Find</button>
+    </div>
+    <div class="col-2">
+       <button type="submit" class="btn btn-primary current" id="buttonCurrent">Current</button>
+    </div>
+   
+</form>
+</div>
+</div>
+</div>
+ 
+  <div class="row">
+    <div class="col-5">
+      <h2><span class="input-City" id="currentcity"></span></h2>
+      <br />
+      <strong><span class="current-temperature" id="currenttemperature"></span></strong> 
+      <br />
+      <br />
+      <i class="fa-regular fa-sun fa-4x"></i>
+      <br /><br />
+      <strong><span class="temperature-description" id="temperaturedescription"></span></strong><br /><br />
+      <p><i class="fa-solid fa-sun"></i> sunrise: 06:56 am<br />
+      <i class="fa-solid fa-moon"></i> sunset: 09:26 pm</p>
+      <p><i class="fa-solid fa-calendar-day"></i> 11.07.2022 <br /><span class="input-Time"></span></p> 
+      <p></p>
+      
+    </div>
+
+    <div class="col-6">
+      <h2>details today</h2><br />
+     <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">object</th>
+      <th scope="col">icon</th>
+      <th scope="col">reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">wind</th>
+      <td><i class="fa-solid fa-wind"></i></td>
+      <td><span id = "currentwind"></span></td>
+    <tr>
+      <th scope="row">humidity</th>
+      <td><i class="fa-solid fa-water"></i></td>
+      <td><span id = "currenthumidity"></span></td>
+    </tr>
+  </tbody>
+</table>
+<p>tip: don't forget your sunscreen </p>
+ </div>
+
+    <div class="col-5">
+      <h2>forecast next 5 days</h2><br />
+      <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">day</th>
+      <th scope="col">icon</th>
+      <th scope="col">high</th>
+      <th scope="col">low</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">mon</th>
+      <td><i class="fa-regular fa-sun fa-lg"></i></td>
+      <td><strong>28°C</strong></td>
+      <td>20°C</td>
+    </tr>
+    <tr>
+      <th scope="row">tue</th>
+      <td><i class="fa-solid fa-cloud fa-lg"></i></td>
+      <td><strong>20°C</strong></td>
+      <td>15°C</td>
+    </tr>
+    <tr>
+      <th scope="row">wed</th>
+      <td><i class="fa-solid fa-cloud-rain fa-lg"></i></td>
+      <td><strong>22°C</strong></td>
+      <td>15°C</td>
+    </tr>
+      <tr>
+      <th scope="row">thu</th>
+      <td><i class="fa-solid fa-cloud-sun fa-lg"></i></td>
+      <td><strong>25°C</strong></td>
+      <td>20°C</td>
+    </tr>
+      <tr>
+      <th scope="row">fri</th>
+      <td><i class="fa-regular fa-sun fa-lg"></i></td>
+      <td><strong>28°C</strong></td>
+      <td>25°C</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+    <div class="col-6">
+      <h2>graphs for next 5 days</h2>
+      <br />
+      <p>max. temp
+      <img src="images/maxtemp.jpg" alt="max. temp" width="180px" height="40px"></p>
+      <p>min. temp
+      <img src="images/mintemp.jpg" alt="max. temp" width="180px" height="40px"></p>
+      <p>rain  
+      <img src="images/rain.jpg" alt="max. temperature" width="180px" height="40px"></p>
+      <p>wind  
+      <img src="images/wind.jpg" alt="max. temperature" width="180px" height="40px"></p>
+    </div>
+  </div>
+  </div>
+    </div>
+    <script src="src/index.js">
+    </script>
+  </body>
+</html>
